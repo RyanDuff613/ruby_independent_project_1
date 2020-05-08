@@ -37,4 +37,8 @@ class Anagrams
     end
   end
 
+  # def is_antigram?
+  #   user_entry2.chars() 
+  # end
+
 end
