@@ -3,7 +3,7 @@ require ('pry')
 
 class Anagrams
   attr_reader(:user_entry1, :user_entry2)
-  
+  attr_writer(:is_antigram)
 
   def initialize (user_entry1, user_entry2)
     @user_entry1 = user_entry1.downcase()
@@ -41,13 +41,17 @@ class Anagrams
     entry1_array = @user_entry1.chars().sort()
     entry2_array = @user_entry2.chars().sort() 
     i=0
+    @is_antigram = false
+    binding.pry
     until (i = entry1_array.length() - 1)
       if entry1_array[i] === entry2_array[i]
-        i +=1
-        false
+        @is_antigram = false
+      else
+        i += 1
+        @is_antigram = true
       end
     end
-    true
+    @is_antigram
   end
 
 end

@@ -29,7 +29,7 @@ describe("Anagrams#is_anagram") do
     expect(anagram.is_anagram?()).to(eq(true))
   end
 
-  it("checks to see if multi-word entries are anangrams") do
+  it("checks to see if multi-word entries are ananrams") do
     anagram = Anagrams.new("is a team", "meat si a")
     expect(anagram.is_anagram?()).to(eq(true))
   end
