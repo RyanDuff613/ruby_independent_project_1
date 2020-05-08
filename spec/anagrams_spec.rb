@@ -21,3 +21,10 @@ describe("Anagram#is_word")do
     expect(anagram.is_word?(anagram.user_entry1)).to(eq(true))
   end
 end
+
+describe("Anagrams#is_anagram") do
+  it("check to see if entries are an anagram") do
+    anagram = Anagrams.new("eat", "ate")
+    expect(anagram.is_anagram?()).to(eq(true))
+  end
+end
