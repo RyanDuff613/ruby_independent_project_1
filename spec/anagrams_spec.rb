@@ -41,3 +41,10 @@ describe("Anagram#is_antigram") do
     expect(anagram.is_antigram?()).to(eq(true))
   end
 end
+
+describe("Anagram#is_antigram") do
+  it("checks to see if user entries are anti-grams")do
+    anagram = Anagrams.new("eat", "set")
+    expect(anagram.is_antigram?()).to(eq(false))
+  end
+end
