@@ -11,7 +11,7 @@ This is a demonstration of skills learned in week 1 of the Epicodus Ruby curricu
 
 ## Setup/Installation Requirements
 Users will need to clone the project from a github repository at https://github.com/RyanDuff613/ruby_independent_project_1.git. Once cloned, open a Terminal window. On the command line navigate to the project folder and run $ bundle install, then $ chmod +x anagrams_script.rb to allow the terminal to run the script. 
-Finally, run $ ./coin_combinations_script.rb to execute the application.
+Finally, run $ ./anagrams_script.rb to execute the application.
 
 
 ## Specifications
@@ -37,7 +37,14 @@ Finally, run $ ./coin_combinations_script.rb to execute the application.
 
 ## Known Bugs
 
+Script file runs but throws error on my machine. 
+Unresolved or ambigious specs during Gem::Specification.reset:
+      rspec-expectations (~> 3.9.0)
+      Available/installed versions of this gem:
+      - 3.9.2
+      - 3.9.1
 
+    Not certain what this means. I'm working on it though.
 
 ### License
 

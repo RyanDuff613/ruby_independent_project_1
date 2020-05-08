@@ -8,3 +8,8 @@ puts "got that! now enter your second word"
 user_entry2 = gets.chomp
 
 anagrams = Anagrams.new(user_entry1, user_entry2)
+if anagrams.is_anagram?()
+  puts "your two entries are an anagram"
+else
+  puts "your two entries are not an anagram"
+end

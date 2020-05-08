@@ -20,7 +20,7 @@ class Anagrams
   end
   def is_word?(input)
     # binding.pry
-    if (input.split('').include? "a") || (input.split('').includes? "e") || (input.split('').includes? "i") || (input.split('').includes? "o") || (input.split('').includes? "u") || (input.split('').includes? "y")
+    if (input.split('').include? "a") || (input.split('').include? "e") || (input.split('').include? "i") || (input.split('').include? "o") || (input.split('').include? "u") || (input.split('').include? "y")
       true
     else
       false
@@ -31,6 +31,8 @@ class Anagrams
     if entry_length?() && is_word?(@user_entry1) && is_word?(@user_entry2)
       if @user_entry1.chars().sort() === @user_entry2.chars().sort()
         true
+      else 
+        false
       end
     end
   end
