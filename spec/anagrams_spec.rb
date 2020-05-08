@@ -24,8 +24,14 @@ describe("Anagram#is_word")do
 end
 
 describe("Anagrams#is_anagram") do
-  it("check to see if entries are an anagram") do
+  it("check to see if single word entries are an anagram") do
     anagram = Anagrams.new("eat", "ate")
-    expect(anagram.is_anagram?).to(eq(true))
+    expect(anagram.is_anagram?()).to(eq(true))
+  end
+
+  it("checks to see if multi-word entries are anangrams") do
+    anagram = Anagrams.new("is a team", "meat si a")
+    expect(anagram.is_anagram?()).to(eq(true))
   end
 end
+
