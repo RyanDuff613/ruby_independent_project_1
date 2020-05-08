@@ -37,8 +37,17 @@ class Anagrams
     end
   end
 
-  # def is_antigram?
-  #   user_entry2.chars() 
-  # end
+  def is_antigram?
+    entry1_array = @user_entry1.chars().sort()
+    entry2_array = @user_entry2.chars().sort() 
+    i=0
+    until (i = entry1_array.length() - 1)
+      if entry1_array[i] === entry2_array[i]
+        i +=1
+        false
+      end
+    end
+    true
+  end
 
 end
