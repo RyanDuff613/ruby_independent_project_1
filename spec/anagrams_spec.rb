@@ -25,6 +25,6 @@ end
 describe("Anagrams#is_anagram") do
   it("check to see if entries are an anagram") do
     anagram = Anagrams.new("eat", "ate")
-    expect(anagram.is_anagram?()).to(eq(true))
+    expect(anagram.is_anagram?).to(eq(true))
   end
 end

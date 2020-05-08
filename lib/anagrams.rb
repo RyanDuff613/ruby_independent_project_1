@@ -15,7 +15,6 @@ class Anagrams
       # is_anagram()
       true
     else
-      puts "in order to be anagrams, two words must be the same length. Please enter two words of the same length and try again"
       false
     end
   end
@@ -28,7 +27,12 @@ class Anagrams
     end
   end
 
-  # def is_anagram?
-  # end
+  def is_anagram?
+    if entry_length?() && is_word?(@user_entry1) && is_word?(@user_entry2)
+      if @user_entry1.chars().sort() === @user_entry2.chars().sort()
+        true
+      end
+    end
+  end
 
 end
