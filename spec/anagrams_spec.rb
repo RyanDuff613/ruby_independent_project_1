@@ -9,7 +9,8 @@ describe("Anagrams") do
 end
 
 describe("Anagram#entry_length") do
-  it("checks length of user entries to make sure they are equal")
+  it("checks length of user entries to make sure they are equal")do
     anagram = Anagrams.new("eat", "at")
     expect(anagram.entry_length).to(eq(false))
+  end
 end
