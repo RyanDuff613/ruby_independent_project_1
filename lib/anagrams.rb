@@ -6,8 +6,8 @@ class Anagrams
   attr_writer(:is_antigram)
 
   def initialize (user_entry1, user_entry2)
-    @user_entry1 = user_entry1.downcase()
-    @user_entry2 = user_entry2.downcase()
+    @user_entry1 = user_entry1.downcase().gsub(/[^a-zA-Z]/, '')
+    @user_entry2 = user_entry2.downcase().gsub(/[^a-zA-Z]/, '')
   end
   
   def entry_length? 
