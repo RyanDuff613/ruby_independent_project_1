@@ -12,14 +12,13 @@ class Anagrams
   
   def entry_length? 
     if @user_entry1.length() === @user_entry2.length()
-      # is_anagram()
       true
     else
       false
     end
   end
+
   def is_word?(input)
-    # binding.pry
     if (input.split('').include? "a") || (input.split('').include? "e") || (input.split('').include? "i") || (input.split('').include? "o") || (input.split('').include? "u") || (input.split('').include? "y")
       true
     else
@@ -40,16 +39,11 @@ class Anagrams
   def is_antigram?
     entry1_array = @user_entry1.chars().sort()
     entry2_array = @user_entry2.chars().sort() 
-    i=0
-    @is_antigram = false
-    binding.pry
-    until (i = entry1_array.length() - 1)
-      if entry1_array[i] === entry2_array[i]
-        @is_antigram = false
-      else
-        i += 1
-        @is_antigram = true
-      end
+    compare = entry1_array & entry2_array
+    if compare.empty?
+      @is_antigram = true
+    else
+      @is_antigram = false
     end
     @is_antigram
   end

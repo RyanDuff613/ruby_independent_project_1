@@ -11,5 +11,9 @@ anagrams = Anagrams.new(user_entry1, user_entry2)
 if anagrams.is_anagram?()
   puts "your two entries are an anagram"
 else
+  if anagrams.is_antigram?()
+    puts "your two entries are antigrams"
+  else
   puts "your two entries are not an anagram"
+  end
 end
